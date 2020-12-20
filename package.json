@@ -15,6 +15,7 @@
       "typeorm": "0.2.29"
    },
    "scripts": {
-      "start": "ts-node src/index.ts"
+      "start": "ts-node src/index.ts",
+      "migration":"ts-node ./node_modules/.bin/typeorm migration:run"
    }
 }
