@@ -17,6 +17,19 @@ const testRoutes = [
  },
  {
     method:'get',
+    url:"/test_middleware",
+    middlewares:[
+        (req,res,next)=>{
+          req.fancyThing = `this is where you can do someting cause its middleware - somecode:${Date.now()}`;
+          next();
+        },
+        (req,res)=>{
+            return res.end(req.fancyThing);
+        }
+    ]
+ },
+ {
+    method:'get',
     url:"/api/authors",
     middlewares:[
         async (req,res)=>{
@@ -151,7 +164,7 @@ const testRoutes = [
                     message: "book has been deleted",
                     book: bookToDelete
                 });
-                
+
             }catch(err){
                res.json({
                    error:"error"

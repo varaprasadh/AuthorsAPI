@@ -8,6 +8,10 @@ rest api built with typeorm,postgresql,express
  ***now server starts at localhost:3000 by default*** 
 - now you can interact with `curl` or `postman` or your fav rest api testing tool.
 
+# this architecture provides
+ - easy way to create bunch of api handlers easily
+ - middlewares can by handled easily
+ - more.
  ## extras
  - to manually run a container 
     docker run -p 5432:5432 -d \
