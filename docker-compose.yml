@@ -1,11 +1,10 @@
-version: "3.5"
-
+version: '3.5'
 services:
-  db:
-    image: "postgres:13"
-    restart: "always"
+  postgres:
+    image: 'postgres'
     ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_PASSWORD: "password"
-      POSTGRES_USER: "typeormtest"
+        - '5432:5432'
+    environment: 
+        - POSTGRES_PASSWORD=postgres 
+        - POSTGRES_USER=postgres 
+        - POSTGRES_DB=authorsapi
